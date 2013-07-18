@@ -29,6 +29,14 @@ map! <M-F11>    <Plug>(resizewin-full)
 ~~~~
 
 
+If you want to change the expansion/contraction width/height, set your favorite values to global variables as follow.
+
+~~~~VimL
+let g:resizewin#resize_width  = 3  " the default value is 1.
+let g:resizewin#resize_height = 3  " the default value is 1.
+~~~~
+
+
 
 
 ## Install
