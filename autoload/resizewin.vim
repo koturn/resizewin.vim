@@ -82,6 +82,7 @@ if (has('win95') || has('win16') || has('win32') || has('win64'))
       let s:is_fullsize = 1
     endif
   endfunction
+  return
 else
   if !exists('s:is_fullsize')
     let s:is_fullsize = 0
@@ -108,8 +109,8 @@ else
       let s:lines      = &lines
       let s:columns    = &columns
       let s:winpos_cmd = s:get_winpos_cmd()
-      winpos -8 -8
-      set lines=999 columns=999
+      winpos   -8  -8
+      winsize 999 999
       let s:is_fullsize = 1
     endif
   endfunction
