@@ -32,20 +32,17 @@ function! resizewin#resizewin()
       if l:key ==# 'H'
         let l:w = l:w - l:d2
       endif
-    endif
-    if l:key ==? 'j'
+    elseif l:key ==? 'j'
       let l:h = l:h + l:d1
       if l:key ==# 'J'
         let l:h = l:h + l:d2
       endif
-    endif
-    if l:key ==? 'k' && l:h >= 5
+    elseif l:key ==? 'k' && l:h >= 5
       let l:h = l:h - l:d1
       if l:key ==# 'K'
         let l:h = l:h - l:d2
       endif
-    endif
-    if l:key ==? 'l'
+    elseif l:key ==? 'l'
       let l:w = l:w + l:d1
       if l:key ==# 'L'
         let l:w = l:w + l:d2
@@ -82,7 +79,6 @@ if (has('win95') || has('win16') || has('win32') || has('win64'))
       let s:is_fullsize = 1
     endif
   endfunction
-  return
 else
   if !exists('s:is_fullsize')
     let s:is_fullsize = 0
@@ -105,6 +101,7 @@ else
       let &lines   = s:lines
       let &columns = s:columns
       let s:is_fullsize = 0
+      return
     else
       let s:lines      = &lines
       let s:columns    = &columns
