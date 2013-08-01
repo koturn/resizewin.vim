@@ -17,7 +17,7 @@ This plugin can be used in CUI and GUI.
 This plugin provides interface for key-bind.  
 You can use it as follow.  
 
-~~~~VimL
+```VimL
 nmap <S-Left>   <Plug>(resizewin-contract-x)
 nmap <S-Down>   <Plug>(resizewin-expand-y)
 nmap <S-Up>     <Plug>(resizewin-contract-y)
@@ -26,15 +26,15 @@ map  <F11>      <Plug>(resizewin-full)
 map! <F11>      <Plug>(resizewin-full)
 map  <M-F11>    <Plug>(resizewin-full)
 map! <M-F11>    <Plug>(resizewin-full)
-~~~~
+```
 
 
 If you want to change the expansion/contraction width/height, set your favorite values to global variables as follow.
 
-~~~~VimL
+```VimL
 let g:resizewin#resize_width  = 3  " the default value is 1.
 let g:resizewin#resize_height = 3  " the default value is 1.
-~~~~
+```
 
 
 
@@ -43,7 +43,7 @@ let g:resizewin#resize_height = 3  " the default value is 1.
 If you use [NeoBundle](https://github.com/Shougo/neobundle.vim "NeoBundle") for a plugin manager,
 write following code in .vimrc and do command :NeoBundleInstall.
 
-~~~~VimL
+```VimL
 NeoBundleLazy 'koturn/resizewin.vim', {
       \ 'autoload' : {
       \   'commands' : ['ResizeWin', 'FullSize'],
@@ -54,6 +54,6 @@ NeoBundleLazy 'koturn/resizewin.vim', {
       \     '<Plug>(resizewin-expand-x)',
       \     '<Plug>(resizewin-full)',
       \]}}
-~~~~
+```
 
 If you use other plugin manager or don't use it, I'm sorry, but please install this plugin on your own.
